@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: ${DATASOURCE_URL}
+    username: hapcloud
+    password: handhand
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+  cloud:
+    config:
+      allowOverride: true
+      failFast: true
+      overrideNone: false
+      overrideSystemProperties: false
+  sleuth:
+    integration:
+      enabled: false
+    scheduled:
+      enabled: false
+    sampler:
+      percentage: 1.0
