@@ -1,11 +1,11 @@
 spring:
   datasource:
-    url: ${DATASOURCE_URL}
+    url: jdbc:mysql://192.168.12.95:3307/hap_enterprise_service?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: hapcloud
     password: handhand
   rabbitmq:
-    host: rabbitmq
-    port: 5672
+    host: 192.168.12.95
+    port: 5673
   cloud:
     config:
       allowOverride: true

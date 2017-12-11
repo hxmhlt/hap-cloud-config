@@ -1,11 +1,11 @@
 spring:
   datasource:
-    url: ${DATASOURCE_URL}
+    url: jdbc:mysql://192.168.12.95:3307/hap_user_service?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: hapcloud
     password: handhand
   rabbitmq:
-    host: rabbitmq
-    port: 5672
+    host: 192.168.12.95
+    port: 5673
   cloud:
     config:
       allowOverride: true
@@ -29,6 +29,21 @@ hystrix:
 zuul:
   addHostHeader: true
   routes:
+    hbc:
+      path: /blockchain/**
+      serviceId: hbc-blockchain-service
+    hbcClient:
+      path: /blockchain-client/**
+      serviceId: hbc-blockchain-client-service
+    hbcFileTransfer:
+      path: /blockchain-file-tranfer/**
+      serviceId: hbc-file-transfer-service
+    hbcClientTest:
+      path: /blockchain-client-second/**
+      serviceId: hbc-blockchain-client-service-second
+    hbcDappSupperVendor:
+      path: /blockchain-dsv/**
+      serviceId: hbc-dsv-service
     uaa:
       path: /uaa/**
       serviceId: hap-user-service
@@ -52,12 +67,6 @@ zuul:
       sensitiveHeaders:
       serviceId: hap-oauth-server
       stripPrefix: false
-  ws:
-    brokerages:
-      deployment:
-        end-points: /hapcloud-websocket
-        brokers:  /topic
-        destination-prefixes: /app
 security:
   oauth2:
     resource:
@@ -65,4 +74,8 @@ security:
   ignored:
     - /oauth/**
 swagger:
-  oauthUrl: http://gateway.test.hapcloud.saas.hand-china.com/oauth/oauth/authorize
+  oauthUrl: http://localhost:8080/oauth/oauth/authorize
+hap:
+  permission:
+    service:
+      check: false

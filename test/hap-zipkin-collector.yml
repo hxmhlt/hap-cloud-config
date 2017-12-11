@@ -1,7 +1,7 @@
 spring:
   rabbitmq:
-    host: rabbitmq
-    port: 5672
+    host: 192.168.12.95
+    port: 5673
   sleuth:
     enabled: false
   collector:
