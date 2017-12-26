@@ -1,4 +1,7 @@
 spring:
+  rabbitmq:
+    host: 192.168.12.95
+    port: 5673
   datasource:
     url: jdbc:mysql://192.168.12.95:3307/hap_zipkin_ui?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: hapcloud
