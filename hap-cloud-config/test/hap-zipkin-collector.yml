@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    host: 192.168.12.95
+    port: 5673
+  sleuth:
+    enabled: false
+  collector:
+    base-url: http://hap-zipkin-ui:9030/
+  cloud:
+    config:
+      allowOverride: true
+      failFast: true
+      overrideNone: false
+      overrideSystemProperties: false
