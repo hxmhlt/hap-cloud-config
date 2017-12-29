@@ -29,9 +29,15 @@ hystrix:
 zuul:
   addHostHeader: true
   routes:
+    hbcContract:
+      path: /contract/**
+      serviceId: hbc-contract-service
     hbc:
       path: /blockchain/**
       serviceId: hbc-blockchain-service
+    hbcNode:
+      path: /node/**
+      serviceId: hbc-node-service
     hbcClient:
       path: /blockchain-client/**
       serviceId: hbc-blockchain-client-service
