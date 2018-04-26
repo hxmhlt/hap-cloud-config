@@ -5,10 +5,7 @@ spring:
     password: handhand
   rabbitmq:
     host: 192.168.12.95
-    port: 5672
-  redis:
-    host: 192.168.12.95
-    port: 6377
+    port: 5673
   cloud:
     config:
       allowOverride: true
@@ -22,9 +19,13 @@ spring:
       enabled: false
     sampler:
       percentage: 1.0
-serviceAccountId: 0
-
-peerSidecar:
-  eurekaHost: hap-register-server.HBlockchain
-  eurekaPort: 8000
-  springProfiles: test
+rancher:
+  url: https://192.168.11.201:38080/v2-beta/projects/1a9414/
+  accessKey: 86FFC7DF5C6E7989373E
+  secretKey: f4tCG8PzDusPbwRguJPBZjzwbjF68YcX7y85Z72D
+  image:
+    fabricPeer:
+      peer: "hyperledger/fabric-peer:x86_64-1.1.0"
+      nodesdk: "repo.hjl.hscf.com:5050/hblockchain/hbc-blockchain-fabric-node:v1.0"
+      sidecar: "repo.hjl.hscf.com:5050/hblockchain/hbc-blockchain-client-service:v1.0"
+      couchdb: "hyperledger/fabric-couchdb:x86_64-0.4.6"

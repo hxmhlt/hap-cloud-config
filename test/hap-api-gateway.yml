@@ -25,13 +25,33 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 6000
+            timeoutInMilliseconds: 60000
 zuul:
   addHostHeader: true
+  max:
+    host:
+      connections: 500
+      socket-timeout-millis: 60000
+      connect-timeout-millis: 60000
   routes:
+    hbcExplorer:
+      path: /explorer/**
+      serviceId: hbc-explorer-service
+    hbcInfo:
+      path: /info/**
+      serviceId: hbc-info-service
+    hbcSupplyChain:
+      path: /supplychain/**
+      serviceId: hbc-supplychain-service
+    hbcContract:
+      path: /contract/**
+      serviceId: hbc-smart-contract-service
     hbc:
       path: /blockchain/**
       serviceId: hbc-blockchain-service
+    hbcNode:
+      path: /node/**
+      serviceId: hbc-node-service
     hbcClient:
       path: /blockchain-client/**
       serviceId: hbc-blockchain-client-service
@@ -74,8 +94,20 @@ security:
   ignored:
     - /oauth/**
 swagger:
-  oauthUrl: http://localhost:8080/oauth/oauth/authorize
+  oauthUrl: http://192.168.12.95:8080/oauth/oauth/authorize
 hap:
   permission:
     service:
       check: false
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  eureka:
+    enabled: true
+
+logging:
+  level:
+    com.hand.hap.cloud.gateway.service: debug

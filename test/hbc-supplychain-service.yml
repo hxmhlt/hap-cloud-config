@@ -5,10 +5,7 @@ spring:
     password: handhand
   rabbitmq:
     host: 192.168.12.95
-    port: 5672
-  redis:
-    host: 192.168.12.95
-    port: 6377
+    port: 5673
   cloud:
     config:
       allowOverride: true
@@ -22,9 +19,3 @@ spring:
       enabled: false
     sampler:
       percentage: 1.0
-serviceAccountId: 0
-
-peerSidecar:
-  eurekaHost: hap-register-server.HBlockchain
-  eurekaPort: 8000
-  springProfiles: test

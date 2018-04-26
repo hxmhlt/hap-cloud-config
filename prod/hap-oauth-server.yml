@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.12.134:3306/hap_user_service?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: hbcprod369753
+  redis:
+    host: 192.168.12.134
+    port: 6379
+  rabbitmq:
+    host: 192.168.12.134
+    port: 5672
+  cloud:
+    config:
+      allowOverride: true
+      failFast: true
+      overrideNone: false
+      overrideSystemProperties: false
+  sleuth:
+    integration:
+      enabled: false
+    scheduled:
+      enabled: false
+    sampler:
+      percentage: 1.0
+mail:
+  host: smtp.163.com
+  port: 25
+  send:
+    username: 13187325476@163.com
+    password: 601124052zyzy
+password:
+  reset:
+    url: http://oauth.cloud.saas.hand-china.com/password/
