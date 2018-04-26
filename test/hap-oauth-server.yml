@@ -5,7 +5,7 @@ spring:
     password: handhand
   redis:
     host: redis.tools
-    port: 6377
+    port: 6379
   rabbitmq:
     host: rabbitmq.tools
     port: 5673
