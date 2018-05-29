@@ -20,10 +20,4 @@ spring:
     sampler:
       percentage: 1.0
 k8s:
-  configFile: ~/.kube/config
-  image:
-    fabricPeer:
-      peer: "hyperledger/fabric-peer:x86_64-1.1.0"
-      nodesdk: "repo.hjl.hscf.com:5050/hblockchain/hbc-blockchain-fabric-node:v1.0"
-      sidecar: "repo.hjl.hscf.com:5050/hblockchain/hbc-blockchain-client-service:v1.0"
-      couchdb: "hyperledger/fabric-couchdb:x86_64-0.4.6"
+  configFile: /k8s/config

@@ -29,6 +29,12 @@ hystrix:
 zuul:
   addHostHeader: true
   routes:
+    hbcNode:
+      path: /node/**
+      serviceId: hbc-node-service
+    hbcK8s:
+      path: /k8s/**
+      serviceId: hbc-k8s-service
     hbcExplorer:
       path: /explorer/**
       serviceId: hbc-explorer-service
