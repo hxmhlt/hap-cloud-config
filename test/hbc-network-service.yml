@@ -23,3 +23,7 @@ spring:
     sampler:
       percentage: 1.0
 serviceAccountId: 0
+
+com:
+  projcet:
+    namespace: hbc
