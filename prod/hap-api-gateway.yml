@@ -56,9 +56,6 @@ zuul:
     hbc:
       path: /blockchain/**
       serviceId: hbc-blockchain-service
-    hbcNode:
-      path: /rancher/**
-      serviceId: hbc-rancher-service
     hbcClient:
       path: /blockchain-client/**
       serviceId: hbc-blockchain-client-service
