@@ -6,6 +6,8 @@ spring:
   rabbitmq:
     host: 192.168.12.95
     port: 5672
+    exchange: hbc
+    exchangeType: topic
   cloud:
     config:
       allowOverride: true

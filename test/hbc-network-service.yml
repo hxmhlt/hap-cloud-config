@@ -6,6 +6,8 @@ spring:
   rabbitmq:
     host: rabbitmq.tools
     port: 5673
+    exchange: hbc
+    exchangeType: topic
   redis:
     host: redis.tools
     port: 6379
