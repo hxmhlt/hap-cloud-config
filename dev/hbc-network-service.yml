@@ -23,12 +23,12 @@ spring:
       percentage: 1.0
 serviceAccountId: 0
 
-com:
+network:
   rediscache:
     cacheSeconds: 600
   time:
     count: 100
     period: 2000
     delay: 1000
-  projcet:
+  project:
     namespace: hbc
