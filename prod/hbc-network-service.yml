@@ -31,7 +31,7 @@ network:
     cacheSeconds: 600
   time:
     count: 100
-    period: 2000
+    period: 5000
     delay: 1000
   project:
     namespace: hbc
