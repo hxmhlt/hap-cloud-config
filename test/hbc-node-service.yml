@@ -25,9 +25,9 @@ docker:
     IMAGE_NODESDK: repo.hjl.hscf.com:5050/hblockchain/hbc-blockchain-fabric-node:v1.0
     IMAGE_HBC_CA_API_SERVER: repo.hjl.hscf.com:5050/hblockchain/hbc-ca-api-server:v1.0
     IMAGE_SIDECAR: repo.hjl.hscf.com:5050/hblockchain/hbc-blockchain-client-service:v1.0
-    IMAGE_PEER: hyperledger/fabric-peer:x86_64-1.1.0-rc1
-    IMAGE_ORDERER: hyperledger/fabric-orderer:x86_64-1.1.0-rc1
-    IMAGE_FABRIC_CA: hyperledger/fabric-ca:x86_64-1.1.0-rc1
+    IMAGE_PEER: hyperledger/fabric-peer:x86_64-1.1.0
+    IMAGE_ORDERER: hyperledger/fabric-orderer:x86_64-1.1.0
+    IMAGE_FABRIC_CA: hyperledger/fabric-ca:x86_64-1.1.0
     IMAGE_ZK: hyperledger/fabric-zookeeper:x86_64-0.4.6
     IMAGE_KAFKA: hyperledger/fabric-kafka:x86_64-0.4.6
     IMAGE_COUCHDB: hyperledger/fabric-couchdb:x86_64-0.4.6
