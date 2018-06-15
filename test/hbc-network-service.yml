@@ -35,3 +35,6 @@ network:
     delay: 1000
   project:
     namespace: hbc
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
