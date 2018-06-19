@@ -35,6 +35,9 @@ zuul:
       socket-timeout-millis: 60000
       connect-timeout-millis: 60000
   routes:
+    hbcCert:
+      path: /cert/**
+      serviceId: hbc-cert-service
     hbcNetwork:
       path: /network/**
       serviceId: hbc-network-service
