@@ -6,6 +6,9 @@ spring:
   rabbitmq:
     host: rabbitmq.tools
     port: 5673
+  redis:
+    host: redis.tools
+    port: 6379
   cloud:
     config:
       allowOverride: true
