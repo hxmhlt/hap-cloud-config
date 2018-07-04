@@ -1,6 +1,6 @@
 spring:
   rabbitmq:
-    host: rabbitmq.tools
+    host: rabbitmq.hbc
     port: 5673
   sleuth:
     integration:

@@ -1,15 +1,15 @@
 spring:
   datasource:
-    url: jdbc:mysql://mysql.tools:3306/hbc_blockchain_service?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://mysql.hbc:3306/hbc_blockchain_service?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: hapcloud
     password: handhand
   rabbitmq:
-    host: rabbitmq.tools
+    host: rabbitmq.hbc
     port: 5673
     exchange: hbc
     exchangeType: topic
   redis:
-    host: redis.tools
+    host: redis.hbc
     port: 6379
   cloud:
     config:

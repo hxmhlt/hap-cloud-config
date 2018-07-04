@@ -1,9 +1,9 @@
 spring:
   rabbitmq:
-    host: rabbitmq.tools
+    host: rabbitmq.hbc
     port: 5673
   datasource:
-    url: jdbc:mysql://mysql.tools:3306/hap_zipkin_ui?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://mysql.hbc:3306/hap_zipkin_ui?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: hapcloud
     password: handhand
     schema: classpath:/mysql.sql
