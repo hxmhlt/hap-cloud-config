@@ -22,9 +22,9 @@ spring:
 
 docker:
   image:
-    IMAGE_NODESDK: repo.hjl.hscf.com:5050/hblockchain/hbc-blockchain-fabric-node:v1.0
-    IMAGE_HBC_CA_API_SERVER: repo.hjl.hscf.com:5050/hblockchain/hbc-ca-api-server:v1.0
-    IMAGE_SIDECAR: repo.hjl.hscf.com:5050/hblockchain/hbc-blockchain-client-service:v1.0
+    IMAGE_NODESDK: registry.choerodon.com.cn/mobile-center-handblockchain/hbc-fabric:dev
+    IMAGE_HBC_CA_API_SERVER: registry.choerodon.com.cn/mobile-center-handblockchain/hbc-ca-api-server:dev
+    IMAGE_SIDECAR: registry.choerodon.com.cn/mobile-center-handblockchain/hbc-blockchain-client-service:v1.0
     IMAGE_PEER: hyperledger/fabric-peer:x86_64-1.1.0
     IMAGE_ORDERER: hyperledger/fabric-orderer:x86_64-1.1.0
     IMAGE_FABRIC_CA: hyperledger/fabric-ca:x86_64-1.1.0
